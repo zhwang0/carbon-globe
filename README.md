@@ -1,4 +1,4 @@
-# 🌍 Carbon-Bench Dataset
+# 🌍 CarbonGlobe Dataset
 > **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)**  
 > Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
 > Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
@@ -9,7 +9,7 @@ A global, ML-ready dataset and benchmark for **forest carbon forecasting**.
 --- 
 
 ## Overview
-**Carbon-Bench** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across climate science, environmental monitoring, and ecological modeling.
+**CarbonGlobe** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across climate science, environmental monitoring, and ecological modeling.
 
 
 ## Key Features
@@ -77,9 +77,9 @@ f you use CarbonGlobe in your research, please cite:
 > In *Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)*, 2025.
 
 <!-- ```bibtex
-@inproceedings{wang2025treefinder,
-  title     = {TreeFinder: A US-Scale Benchmark Dataset for Individual Tree Mortality Monitoring Using High-Resolution Aerial Imagery},
-  author    = {Wang, Zhihao and Li, Cooper and Wang, Ruichen and Ma, Lei and Hurtt, George and Jia, Xiaowei and Mai, Gengchen and Li, Zhili and Xie, Yiqun},
+@inproceedings{wang2025carbonglobe,
+  title     = {CarbonGlobe: A Global-Scale, Multi-Decade Dataset and Benchmark for Carbon Forecasting in Forest Ecosystems},
+  author    = {Wang, Zhihao and Ma, Lei and Hurtt, George and Jia, Xiaowei and Li, Yanhua and Li, Ruohan and Li, Zhili and Xu, Shuo and Xie, Yiqun},
   booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS 2025), Datasets and Benchmarks Track},
   year      = {2025}
 }
