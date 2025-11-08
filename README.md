@@ -1,53 +1,96 @@
-# Carbon-Bench Dataset
+# 🌍 Carbon-Bench Dataset
+> **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)**  
+> Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
+> Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
+
+
+A global, ML-ready dataset and benchmark for **forest carbon forecasting**.
+
+--- 
 
 ## Overview
-The Carbon-Bench dataset is a comprehensive collection of remote sensing data focused on carbon cycle processes. This dataset is designed to support research in climate science, environmental monitoring, and ecological studies. By providing detailed observations and measurements, the Carbon-Bench dataset aims to enhance our understanding of carbon dynamics and their impact on global climate change.
-
-## Features
-- **Global-Scale Coverage**: The first global-scale machine learning-ready dataset for monitoring and forecasting forest carbon dynamics, provided at a 0.5° resolution.
-- **Extended Temporal Range**: Spans over 40 years, offering a comprehensive historical perspective for long-term analysis.
-- **Extensive Variable Set**: Covers over 100+ variables integrated from heterogeneous sources, ensuring a rich and diverse dataset.
-- **Scenario-Based Training and Testing**: Includes different scenarios to resemble diverse application conditions, enhancing the dataset's versatility for various research needs.
-- **Benchmark Experiments**: Provides benchmark experiments with a suite of machine learning forecasting models and new metrics specifically designed for the carbon forecasting problem.
+**Carbon-Bench** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across climate science, environmental monitoring, and ecological modeling.
 
 
-## Data Information
-### Dataset Access and Versioning
-The dataset will be publicly available on Hugging Face and Zenodo after the publication.
+## Key Features
+- **Global coverage at 0.5°**  
+  First global-scale ML-ready dataset for monitoring and forecasting forest carbon dynamics.
+- **Multi-decadal span (40+ years)**  
+  Enables long-term trend and variability analysis.
+- **100+ variables**  
+  Harmonized inputs from meteorology, CO₂, soils, vegetation, and ancillary layers.
+- **Scenario-based splits**  
+  Training/testing protocols resembling real applications (e.g., climate zones, forest age).
+- **Benchmarks & metrics**  
+  Strong baselines (LSTM, Transformer family, DeepED, etc.) and **problem-driven metrics** for carbon forecasting.
 
 
-### Source Details and Licensing
+---
 
-All datasets used in Carbon-Bench are openly accessible. Below are the details for each data source:
+## Source Datasets
+All inputs are from open sources. Please follow original licenses and citation guidelines.
 
-- **Meteorological Data**:  
-  - Source: [NASA’s Modern-Era Retrospective analysis for Research and Applications, version 2](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/) by [Gelaro et al., 2017](https://doi.org/10.1175/JCLI-D-16-0758.1).
-  - Usage: Please reference the relevatn [paper citation requirements](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/).
+- **Meteorological (MERRA-2)**  
+  NASA GMAO MERRA-2 (Gelaro et al., 2017).  
+  Source: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/  
+  Citation guidance: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/
 
-- **CO₂ Data**:  
-  - Source: [NOAA CarbonTracker](https://gml.noaa.gov/ccgg/carbontracker/) by [Peters et al., 2007](https://doi.org/10.1073/pnas.0708986104).
-  - Usage: Please reference the relevant [paper citation requirements](https://gml.noaa.gov/ccgg/carbontracker/CT2007/citation.php).
+- **CO₂ (NOAA CarbonTracker)**  
+  Peters et al., 2007.  
+  Source: https://gml.noaa.gov/ccgg/carbontracker/
 
-- **Soil Properties**:  
-  - Source: [ROSETTA](https://doi.pangaea.de/10.1594/PANGAEA.870605) by [Montzka et al., 2017](https://doi.org/10.5194/essd-9-529-2017).
-  - Usage: Available under the Creative Commons Attribution 3.0 License.
+- **Soils (ROSETTA)**  
+  Montzka et al., 2017. CC BY 3.0.  
+  DOI: https://doi.pangaea.de/10.1594/PANGAEA.870605
 
-- **Climate Classification Data**:  
-  - Source: [Köppen-Geiger Climate Classification](https://figshare.com/articles/dataset/Present_and_future_K_ppen-Geiger_climate_classification_maps_at_1-km_resolution/6396959/2) by [Beck et al., 2018](https://doi.org/10.1038/sdata.2018.214).
-  - Usage: Available under the Creative Commons Attribution 4.0 International License.
+- **Climate Zones (Köppen–Geiger)**  
+  Beck et al., 2018. CC BY 4.0.  
+  Data: https://figshare.com/articles/dataset/6396959/2
+
+*Additional layers and harmonization details will be documented in the dataset card.*
+
+---
+
+## Benchmarks 
+We provide reproducible baselines covering classical sequence models, knowledge-guided emulators, and recent transformer variants:
+
+- **LSTM** — Standard recurrent model for time-series forecasting [[Graves, 2012]](https://www.cs.toronto.edu/~graves/phd.pdf)  
+- **LSTNet** — CNN+RNN for short/long dependencies [[Lai et al., 2018]](https://arxiv.org/abs/1703.07015)  
+- **DeepED** — Knowledge-guided ED emulator (error-accumulation mitigation) [[Wang et al., 2023]](https://doi.org/10.1145/3589132.3625577)  
+- **Transformer** — Vanilla self-attention [[Vaswani et al., 2017]](https://arxiv.org/abs/1706.03762)  
+- **Informer** — ProbSparse attention for efficiency [[Zhou et al., 2021]](https://arxiv.org/abs/2012.07436)  
+- **DLinear** — Seasonal/trend decomposition with linear heads [[Zeng et al., 2023]](https://arxiv.org/abs/2205.13504)  
+- **Crossformer** — Cross-time/feature attention [[Zhang et al., 2023]](https://openreview.net/forum?id=vSVLM2j9eie)  
+- **TimeXer** — Decoupled inter-target & input-target modeling [[Wang et al., 2024]](https://arxiv.org/abs/2402.19072)
+
+**Problem-driven metrics** (e.g., RMSE, MAE, delta error, cumulative error) are included to capture both step-wise and long-horizon behavior.
+
+---
 
 
-## Benchmarks
-The repository includes codes for the following methods:
-- **LSTM**: A standard LSTM taking time-series ED inputs and outputting targets ([Graves, 2012](https://www.cs.toronto.edu/~graves/phd.pdf)).
-- **LSTNet**: A time-series model extracting short-term dependency using convolution along the time-feature dimension and long-term temporal patterns using RNN ([Lai et al., 2018](https://arxiv.org/abs/1703.07015)).
-- **DeepED**: An LSTM-based deep learning emulator for ED with specialized designs on error accumulation reduction and knowledge-guided learning ([Wang et al., 2023](https://doi.org/10.1145/3589132.3625577)).
-- **Transformer (TF)**: A vanilla transformer model with a self-attention mechanism to capture dependencies across all time steps during the forecasting ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)).
-- **Informer (IF)**: A transformer variant with a ProbSparse attention for reduced complexity ([Zhou et al., 2021](https://arxiv.org/abs/2012.07436)).
-- **DLinear (DL)**: A linear decomposition model to separate data into trend and seasonality, showing comparable performance among transformer-based models while maintaining efficiency ([Zeng et al., 2023](https://arxiv.org/abs/2205.13504)).
-- **Crossformer (CF)**: A transformer variant with a two-stage attention mechanism for modeling both cross-time and cross-feature dependencies ([Zhang et al., 2023](https://openreview.net/forum?id=vSVLM2j9eie)).
-- **TimeXer (TX)**: A transformer variant with a separated modeling strategy to capture both inter-target relationships and input-target dependencies ([Wang et al., 2024](https://arxiv.org/abs/2402.19072)).
+## 📚 Citation
 
+f you use CarbonGlobe in your research, please cite:
 
-## Contacts
-Feel free to contact Zhihao Wang (zhwang1@umd.edu) and Yiqun Xie (xie@umd.edu) for any questions.
+> **Zhihao Wang**, **Lei Ma**, **George Hurtt**, **Xiaowei Jia**, **Yanhua Li**, **Ruohan Li**, **Zhili Li**, **Shuo Xu**, **Yiqun Xie**.  
+> *CarbonGlobe: A Global-Scale, Multi-Decade Dataset and Benchmark for Carbon Forecasting in Forest Ecosystems.*  
+> In *Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)*, 2025.
+
+<!-- ```bibtex
+@inproceedings{wang2025treefinder,
+  title     = {TreeFinder: A US-Scale Benchmark Dataset for Individual Tree Mortality Monitoring Using High-Resolution Aerial Imagery},
+  author    = {Wang, Zhihao and Li, Cooper and Wang, Ruichen and Ma, Lei and Hurtt, George and Jia, Xiaowei and Mai, Gengchen and Li, Zhili and Xie, Yiqun},
+  booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS 2025), Datasets and Benchmarks Track},
+  year      = {2025}
+}
+``` -->
+
+---
+
+## 📬 Contact
+
+For questions or feedback, feel free to reach out:
+
+- **Zhihao Wang** — [zhwang1@umd.edu](mailto:zhwang1@umd.edu)
+- **Yiqun Xie** — [xie@umd.edu](mailto:xie@umd.edu)
+
