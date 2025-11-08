@@ -1,12 +1,9 @@
 # 🌍 CarbonGlobe Dataset
-> **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)**  
+> **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)** 
 > Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
 > Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
 
 
-A global, ML-ready dataset and benchmark for **forest carbon forecasting**.
-
---- 
 
 ## Overview
 **CarbonGlobe** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across climate science, environmental monitoring, and ecological modeling.
@@ -15,7 +12,7 @@ A global, ML-ready dataset and benchmark for **forest carbon forecasting**.
 ## Key Features
 - **Global coverage at 0.5°**  
   First global-scale ML-ready dataset for monitoring and forecasting forest carbon dynamics.
-- **Multi-decadal span (40+ years)**  
+- **Multi-decadal span (40 years)**  
   Enables long-term trend and variability analysis.
 - **100+ variables**  
   Harmonized inputs from meteorology, CO₂, soils, vegetation, and ancillary layers.
@@ -24,8 +21,6 @@ A global, ML-ready dataset and benchmark for **forest carbon forecasting**.
 - **Benchmarks & metrics**  
   Strong baselines (LSTM, Transformer family, DeepED, etc.) and **problem-driven metrics** for carbon forecasting.
 
-
----
 
 ## Source Datasets
 All inputs are from open sources. Please follow original licenses and citation guidelines.
@@ -47,9 +42,7 @@ All inputs are from open sources. Please follow original licenses and citation g
   Beck et al., 2018. CC BY 4.0.  
   Data: https://figshare.com/articles/dataset/6396959/2
 
-*Additional layers and harmonization details will be documented in the dataset card.*
 
----
 
 ## Benchmarks 
 We provide reproducible baselines covering classical sequence models, knowledge-guided emulators, and recent transformer variants:
@@ -64,8 +57,6 @@ We provide reproducible baselines covering classical sequence models, knowledge-
 - **TimeXer** — Decoupled inter-target & input-target modeling [[Wang et al., 2024]](https://arxiv.org/abs/2402.19072)
 
 **Problem-driven metrics** (e.g., RMSE, MAE, delta error, cumulative error) are included to capture both step-wise and long-horizon behavior.
-
----
 
 
 ## 📚 Citation
@@ -85,7 +76,6 @@ f you use CarbonGlobe in your research, please cite:
 }
 ``` -->
 
----
 
 ## 📬 Contact
 
