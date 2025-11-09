@@ -1,6 +1,8 @@
 # 🌍 CarbonGlobe Dataset
 > **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)** 
+
 > Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
+
 > Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
 
 
