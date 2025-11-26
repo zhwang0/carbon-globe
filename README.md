@@ -1,9 +1,9 @@
 # 🌍 CarbonGlobe Dataset
+
 > **Accepted to NeurIPS 2025 (Datasets & Benchmarks Track)** 
-
-> Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
-
-> Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
+> - Paper is available on OpenReview: https://openreview.net/pdf?id=M07aAJKH8B
+> - Project page is available on NeurIPS: https://neurips.cc/virtual/2025/loc/san-diego/poster/121701.
+> - Datasets are available on Kaggle: https://www.kaggle.com/datasets/zhihaow/carbonglobe.
 
 
 
@@ -63,7 +63,7 @@ We provide reproducible baselines covering classical sequence models, knowledge-
 
 ## 📚 Citation
 
-f you use CarbonGlobe in your research, please cite:
+If you use CarbonGlobe in your research, please cite:
 
 > **Zhihao Wang**, **Lei Ma**, **George Hurtt**, **Xiaowei Jia**, **Yanhua Li**, **Ruohan Li**, **Zhili Li**, **Shuo Xu**, **Yiqun Xie**.  
 > *CarbonGlobe: A Global-Scale, Multi-Decade Dataset and Benchmark for Carbon Forecasting in Forest Ecosystems.*  
