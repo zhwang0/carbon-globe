@@ -8,7 +8,7 @@
 
 
 ## Overview
-**CarbonGlobe** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across climate science, environmental monitoring, and ecological modeling.
+**CarbonGlobe** is a comprehensive, ML-ready dataset for modeling and forecasting the forest carbon cycle. It integrates heterogeneous Earth system variables into a consistent spatiotemporal grid and provides standardized **scenario-based evaluations** and **benchmark implementations** to accelerate research across environmental monitoring, and ecological modeling.
 
 
 ## Key Features
@@ -19,7 +19,7 @@
 - **100+ variables**  
   Harmonized inputs from meteorology, CO₂, soils, vegetation, and ancillary layers.
 - **Scenario-based splits**  
-  Training/testing protocols resembling real applications (e.g., climate zones, forest age).
+  Training/testing protocols resembling real applications (e.g., environmental conditions, forest age).
 - **Benchmarks & metrics**  
   Strong baselines (LSTM, Transformer family, DeepED, etc.) and **problem-driven metrics** for carbon forecasting.
 
@@ -40,7 +40,7 @@ All inputs are from open sources. Please follow original licenses and citation g
   Montzka et al., 2017. CC BY 3.0.  
   DOI: https://doi.pangaea.de/10.1594/PANGAEA.870605
 
-- **Climate Zones (Köppen–Geiger)**  
+- **Environmental Conditions (Köppen–Geiger)**  
   Beck et al., 2018. CC BY 4.0.  
   Data: https://figshare.com/articles/dataset/6396959/2
 
